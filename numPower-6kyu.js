@@ -21,13 +21,10 @@ const digPow = (n, p) => {
     }
 
     let sum = newNums.reduce((a, b) => a + b)
-    if (Number.isInteger(sum / n)) {
-        return sum /n
-    } else {
-        return -1
-    }
+    return Number.isInteger(sum / n) ? sum/n : -1
 }
 
 
-console.log(digPow(89, 1))
-console.log(digPow(46288, 3))
+console.log(digPow(89, 1)) //1
+console.log(digPow(92, 1)) //-1
+console.log(digPow(46288, 3)) //51
